@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:cybercodelabs": "node dist/cybercodelabs/server/server.mjs"
+    "deploy": "ng build --configuration production --base-href=/Angular-Deployment-on-GitHub-Pages/ && gh-pages -d dist/cybercodelabs/browser"
   },
   "private": true,
   "packageManager": "npm@10.9.3",
@@ -30,6 +30,7 @@
     "@angular/compiler-cli": "^21.2.0",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
+    "gh-pages": "^6.3.0",
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",
